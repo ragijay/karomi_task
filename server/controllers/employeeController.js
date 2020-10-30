@@ -103,6 +103,12 @@ exports.fetchTeam = async (req, res) => {
 		});
 		teamMembers = teamLeads.concat(...developers);
 	}
+	if (empType === "teamLead") {
+		let developers = await EmployeeModel.find({ reportingTo: employeeId });
+
+		teamMembers = developers;
+	}
+
 	res.status(200).send({ data: teamMembers });
 };
 
