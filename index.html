@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<head>
+    <title>CRM Karomi Technologies</title>
+    <meta name="author" content="Karomi Technologies">
+    <meta name="keywords"
+        content="HR Manager, Developers,Profile data,Team Lead,Project Manager,Developers trackers,Employee details">
+    <meta name="viewport" content="width:device-width, initial scale=0.1">
+    <meta name="description" content="This web DB provide a detail description about the employee details">
+    <link rel="stylesheet" href="css/main.css">
+    </link>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="images/logo.png" class="logo" alt="logo">
+            <div class="profile-header-parent">
+                <div class="profile-header-child">
+                    <div id="username" class="profile-header-child-emp-name"></div>
+                    <div id="designation" class="profile-header-child-designation"></div>
+                    <div id="logout"><a class="profile-header-child-logout" href="login.html">LOG OUT</a></div>
+                </div>
+                <div>
+                    <img src="images/profileImage.png" class="profile-image" alt="logo">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a id='profileBtn' href="#myProfile">My Profile</a></li>
+                <li><a id='teamBtn' href="#myTeam">My Team</a></li>
+                <li><a id='employeeBtn' href="#allEmployees">All Employees</a></li>
+                <!-- <li><a id='createBtn' href="#createEmployees" style="display: none;">Create</a></li> -->
+                <li id='editBtn' class="nav-icon">
+                    <img id='editIcon' src="images/pencil.png" alt="edit icon">
+                    <div class="icon-change">
+                        <img id='checkIcon' src="images/check.png" style="display:none;" alt="checkIcon">
+                        <img id='closeIcon' src="images/close.png" style="display: none; margin-left:15px;"
+                            alt="Close Icon">
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+
+        <!--My Profile-->
+        <div id="myProfile" class="myProfile" style="display: none">
+            <form>
+
+                <div class="row">
+                    <div class="col-3">
+                        <label for="name">NAME:</label><br>
+                        <input type="text" class="input" id="fname" name="employeeName">
+                        <div id='fnameContent'></div>
+                    </div>
+                    <div class="col-3">
+                        <label for="dob">DATE OF BIRTH:</label><br>
+                        <input type="date" class="input" id="dob" name="dateOfBirth">
+                    </div>
+                    <div class="col-3">
+                        <label for="doj">DATE OF JOINING:</label><br>
+                        <input type="date" class="input" id="doj" name="dateOfjoining">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="designation">DESIGNATION:</label><br>
+                        <input type="text" class="input" id="designationInput" name="designation">
+                    </div>
+                    <!-- <div class="col-3">
+                        <label for="empCode">EMPLOYEE CODE:</label><br>
+                        <input type="number" class="input" id="empcode" name="empCode">
+                    </div> -->
+                    <div class="col-3">
+                        <label for="mailId">MAIL ID:</label><br>
+                        <input type="email" class="input" id="mailId" name="mailId">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="reportingTo">REPORTING TO:</label><br>
+                        <input type="text" class="input" id="reportingTo" name="reportingTo">
+                    </div>
+                    <div class="col-3">
+                        <label for="team">TEAM:</label><br>
+                        <input type="team" class="input" id="team" name="team">
+                    </div>
+                    <div class="col-3">
+                        <label for="contact">CONTACT NUMBER:</label><br>
+                        <input type="contact" class="input" id="contact" name="contact">
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+
+        <!--My Team-->
+        <div id='myTeam' class="myTeam">
+            <div class="row" id="user-row">
+
+            </div>
+        </div>
+
+        <!--All Employee-->
+        <div id='allEmployee' class='myEmployee' style="display: none;">
+
+            <table id="employee-list">
+                <div><input id="search-box" type="text" disabled="false">
+                    <button id="search">Search</button>
+                    <button id="reset">Reset</button>
+                </div>
+
+                <tr>
+                    <th>employee Name</th>
+                    <th>dateOfBirth</th>
+                    <th>dateOfJoining</th>
+                    <th>designation</th>
+                    <th>mailId</th>
+                    <th>team</th>
+                    <th>contactNumber</th>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="footer">
+        <img src="images/footerLogo.png" class="footer-logo" alt="logo">
+        <img src="images/socialMediaIcons.png" class="social-media" alt="logo">
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>

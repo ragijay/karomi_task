@@ -1,0 +1,347 @@
+html,
+body {
+	font-family: "Poppins", sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.container {
+	margin-left: auto;
+	max-width: 1125px;
+	margin-right: auto;
+	width:100%;
+}
+
+.header {
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.logo {
+	height: 50px;
+	width: auto;
+	padding-top: 25px;
+}
+.profile-header-parent {
+	display: flex;
+	flex-direction: row;
+}
+.profile-header-child {
+	flex-direction: column;
+}
+.profile-header-child-emp-name {
+	font-weight: 600px;
+	font: bold;
+}
+.profile-header-child-designation {
+	color: #223f82;
+}
+.profile-header-child-logout {
+	text-decoration: none;
+	color: #ec2027;
+}
+.profile-image {
+	margin-left: auto;
+	width: 100px;
+	height: 100px;
+	padding-left: 15px;
+}
+.nav {
+	font-size: 24px;
+}
+.nav-icon {
+	float: right;
+	margin-top: 15px;
+}
+.icon-change {
+	display: flex;
+	flex-direction: row;
+	margin-left: 15px;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border-bottom: 1px #223f82 solid;
+}
+li {
+	float: left;
+}
+li a {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+li a:hover:not(.active) {
+	border-bottom: 4px #ec2027 solid;
+	box-sizing: border-box;
+}
+
+.active {
+	border-bottom: 4px #ec2027 solid;
+	box-sizing: border-box;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+[class*="col-"] {
+	float: left;
+	padding: 30px 5px;
+}
+.col-3 {
+	width: 360px;
+	height: 30px;
+}
+
+.col-2 {
+	width: 200px;
+	height: auto;
+	margin-left: 15px;
+}
+
+.my-profile {
+	margin-top: 30px;
+}
+
+.textArea {
+	width: 100%;
+	overflow: hidden;
+	text-align: left;
+	height: 150px;
+	margin-top: 10px;
+	font-family: "Poppins", sans-serif;
+	border: 1px #f2f2f2 solid;
+	background-color: #f2f2f2;
+}
+
+.input {
+	width: 300px;
+	height: 30px;
+	background-color: #f2f2f2;
+	color: black;
+	border: 1px #f2f2f2 solid;
+	border-radius: 0px;
+	padding-left: 10px;
+	margin-top: 15px;
+}
+
+.footer {
+	margin-top: 100px;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	background-color: black;
+}
+.footer-logo {
+	height: 40px;
+	width: auto;
+	padding-top: 25px;
+	padding-left: 30px;
+}
+.footer-width {
+	width: auto;
+}
+.social-media {
+	float: left;
+	margin-left: auto;
+	width: 189px;
+	height: 41px;
+	padding-right: 30px;
+	margin-top: 30px;
+}
+
+@media screen and (max-height: 768px) {
+	.footer-width {
+		margin-top: 100px;
+		max-width: 100%;
+	}
+}
+
+/* Login page css*/
+.login-box {
+	width: 400px;
+	height: 520px;
+	background: white;
+	margin: 50px auto;
+	border: 1px solid black;
+}
+.login-logo {
+	margin-top: 30px;
+	padding-left: 30px;
+	margin-bottom: 30px;
+}
+.login-label {
+	margin-top: 15px;
+	padding-left: 30px;
+}
+.login-input {
+	width: 330px;
+	height: 40px;
+	margin-top: 15px;
+	border: 1px solid #f2f2f2;
+	background-color: #f2f2f2;
+}
+.margin {
+	margin-left: 30px;
+	margin-top: 15px;
+}
+.background-img {
+	background-image: url("../images/bg.png");
+	overflow: hidden;
+}
+.crack-number {
+	font-size: 14px;
+	color: #ec2027;
+}
+.login-submit {
+	width: 330px;
+	height: 50px;
+	margin-top: 15px;
+	background-color: #ec2027;
+	color: white;
+	text-align: center;
+	border: none;
+}
+/* My team css */
+.myTeam {
+	margin-top: 30px;
+	
+}
+
+.card {
+	max-width: 300px;
+
+	text-align: center;
+	font-family: arial;
+	border: 1px solid black;
+	box-sizing: border-box;
+	padding-left: 10px;
+	margin-top: 15px;
+}
+
+/*flip card css*/
+.flip-card {
+	background-color: transparent;
+	width: 220px;
+	height: 320px;
+	perspective: 1000px;
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.flip-card-front {
+	background-color: #fff;
+	color: black;
+}
+
+.flip-card-back {
+	background-color: #2980b9;
+	color: white;
+	transform: rotateY(180deg);
+	text-decoration: none;
+	text-align: center;
+}
+.flip-card-text-back {
+	text-decoration: none;
+	text-align: center;
+	font-weight: 600;
+}
+
+/* Grid css*/
+.grow {
+	display: table-row;
+	width: 100%;
+	height: 40px;
+}
+.grow:hover {
+	background: #f5f5f5;
+}
+.gcell {
+	display: table-cell;
+	width: auto;
+	height: 100%;
+	padding: 10px;
+}
+.gcell:hover {
+	background: #d6d6d6;
+}
+.gtable {
+	width: 100%; /* change width and height of the table to fixed range */
+	height: 200px;
+	overflow: scroll;
+	table-layout: fixed;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td,
+th {
+	border: 1px solid #f2f2f2;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2
+}
+
+#search-box {
+	margin-top: 30px;
+    margin-bottom: 30px;
+    height: 30px;
+    width: 250px;
+    background-color: #f2f2f2;
+	border: none;
+}
+#search{
+    height: 30px;
+	width: 80px;
+	background-color: #ec2027;
+	color:white;
+	border: none;
+}
+#reset{
+	height: 30px;
+	width: 80px;
+	margin-left:15px;
+	color: #ffff;
+	background-color: #223f82;
+	border:none;
+}
