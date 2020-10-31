@@ -10,8 +10,7 @@ var reportingTo = document.getElementById("reportingTo");
 var team = document.getElementById("team");
 var contact = document.getElementById("contact");
 
-// var createBtn = document.getElementById("createBtn");
-var createBtn = document.createElement('div'); // Unnecessay element
+var createBtn = document.createElement('div'); 
 var profileBtn = document.getElementById("profileBtn");
 var teamBtn = document.getElementById("teamBtn");
 var employeeBtn = document.getElementById("employeeBtn");
@@ -69,6 +68,7 @@ debugger
 		show(employeeBtn);
 		show(profileBtn);
 		hide(teamBtn);
+		show(createBtn);
 
 	}
 	fillDetails();
